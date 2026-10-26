@@ -10,7 +10,7 @@ connection = pika.BlockingConnection(
 channel = connection.channel()
 
 # Ensure the queue exists
-channel.queue_declare(queue="my_queue", durable=True)
+channel.queue_declare(queue="tweek_messages", durable=True)
 
 # Process
 def process_message(ch, method, properties, body):
@@ -25,7 +25,7 @@ def process_message(ch, method, properties, body):
 channel.basic_qos(prefetch_count=1)
 
 channel.basic_consume(
-    queue="my_queue",
+    queue="tweek_messages",
     on_message_callback=process_message,
     auto_ack=False
 )
