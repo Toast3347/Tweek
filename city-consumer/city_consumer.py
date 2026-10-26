@@ -30,5 +30,5 @@ channel.basic_consume(
     auto_ack=False
 )
 
-print("City consumer is waiting for messages...")
+print("Herro, this is City consumer. How can I take your message?")
 channel.start_consuming()
