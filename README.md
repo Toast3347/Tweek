@@ -1,7 +1,34 @@
 # Tweek
 South Park messaging system. Where Cartman can finally get some respect on his authoritah!!
 
-# Setup
+## Send messages
+
+Send a POST message to:
+```
+http://localhost:8080/messages
+```
+
+With the following JSON:
+```json
+{
+  "author":"Stan",
+  "body":"Oh my god, they killed kenny!"
+}
+```
+
+# Easy Setup
+
+## Docker
+
+In the root(Tweek/) run:
+
+```
+docker compose up --build
+```
+
+That's it :)
+
+# Difficult Setup
 
 ## RabbitMQ (Queue)
 Start Docker and run the following command to set up rabbitmq
@@ -88,21 +115,6 @@ python -m pip install -r requirements.txt
 ### Run the consumer
 ```
 python city_consumer.py
-```
-
-## Send messages
-
-Send a POST message to:
-```
-http://localhost:8080/messages
-```
-
-With the following JSON:
-```json
-{
-  "author":"Stan",
-  "body":"Oh my god, they killed kenny!"
-}
 ```
 
 # Finally 
