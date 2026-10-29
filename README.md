@@ -3,6 +3,8 @@ South Park messaging system. Where Cartman can finally get some respect on his a
 
 ## Send messages
 
+### Manually
+
 Send a POST message to:
 ```
 http://localhost:8080/messages
@@ -14,6 +16,14 @@ With the following JSON:
   "author":"Stan",
   "body":"Oh my god, they killed kenny!"
 }
+```
+
+### Automated
+
+from the root of the project run:
+
+```
+python scripts/send_messages.py
 ```
 
 # Easy Setup

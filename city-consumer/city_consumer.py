@@ -63,7 +63,7 @@ def main():
         auto_ack=False,
     )
 
-    print("Herro, this is City consumer. How can I take your message?", flush=True)
+    print("Hello, this is City consumer. How can I take your message?", flush=True)
 
     try:
         channel.start_consuming()
